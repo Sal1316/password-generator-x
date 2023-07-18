@@ -21,5 +21,5 @@
 
 
 git add -A
-git commit -m 'random password function is working'
+git commit -m 'completed project'
 git push origin main
