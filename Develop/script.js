@@ -8,6 +8,7 @@ function writePassword() {
   var passLength = window.prompt(
     "Input a password length between 8-128 characters."
   );
+  if(passLength === null) return; // exits when cancels.
     
   var charTypeUpper = window.confirm("Include UPPERCASE characters");
   var charTypeLower = window.confirm("Include lowercase characters");
@@ -50,20 +51,12 @@ function generatePassword(len, upper, lower, numeric, special) {
 function passwordCriteriaBuilder(upper, lower, numbers, special) { 
   var combinesString = '';
 
-  if(upper) {
-    combinesString += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  }
-  if(lower) {
-    combinesString += 'abcdefghijklmnopqrstuvwxyz';
-  }
-  if(numbers) {
-    combinesString += '0123456789';
-  }
-  if(special) {
-    combinesString += ` !#$%&@'()*`;
-  }
+  if(upper) combinesString += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  if(lower) combinesString += 'abcdefghijklmnopqrstuvwxyz';
+  if(numbers) combinesString += '0123456789';
+  if(special) combinesString += ` !#$%&@'()*`;
   
-  // returna a combined password of all the user type selections
+    // returna a combined password of all the user type selections
   return combinesString;
 }
 
