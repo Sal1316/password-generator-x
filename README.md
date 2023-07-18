@@ -21,5 +21,5 @@
 
 
 git add -A
-git commit -m 'README template complete'
+git commit -m 'random password function is working'
 git push origin main
