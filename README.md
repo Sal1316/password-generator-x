@@ -31,5 +31,6 @@ To use the app just follow these steps:
 
 ## Github links
 
-GitHub repo: https://github.com/Sal1316/password-generator-x
-Published site: https://github.io.com/Sal1316/password-generator-x
+GitHub repo: https://github.com/Sal1316/password-generator-x;
+
+Published site: https://github.io.com/Sal1316/password-generator-x;
