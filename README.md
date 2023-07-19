@@ -7,14 +7,17 @@
 
 ## Usage
 
-- to use the app just follow these steps:
-- 1. when propted, set the max length of the pasword requered.
-- 2. when propted, set the characters desired in the password. For example, $, #, and % are all character that can be use in the password.
-- 3. press the generate button and it will generate a randome password for you to use in your online accounts.
-- 4. copy your password and use it where ever yo like.
-- 5. your are all done.
+To use the app just follow these steps:
 
-- insert some screenshots of the process usage.
+1. Press the red generate password button and wait for the prompt.
+   When prompted, set the max length of the password.
+2. When prompted, set the desired length of the password.
+3. When prompted, click ok if you want to have Uppercase letter in your password. If not, click cancel and continue.
+4. When prompted, click ok if you want to have lowercase letter.
+5. When prompted, click ok if you want numbers.
+6. When prompted, click ok if you want special characters.
+7. copy your password and use it where ever yo like.
+8. your are all done.
 
 ## Images
 
@@ -30,7 +33,3 @@
 
 GitHub repo: https://github.com/Sal1316/password-generator-x
 Published site: https://github.io.com/Sal1316/password-generator-x
-
-git add -A
-git commit -m 'uploaded images to README file'
-git push origin main
