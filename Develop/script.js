@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword); // Add event listener to generate button
 
-// function overrides password to the #password input tag
+// main function: overrides password to the #password input tag
 function writePassword() {
   //variables: 
   var passLength = window.prompt(
@@ -13,10 +13,8 @@ function writePassword() {
   var charTypeUpper = window.confirm("Include UPPERCASE characters");
   var charTypeLower = window.confirm("Include lowercase characters");
   var charTypeNumeric = window.confirm("Include numeric( 0123... ) characters");
-  var charTypeSpacial = window.confirm(
-    "Include special( !#$%&@'()* ) characters"
-    ); 
-    
+  var charTypeSpacial = window.confirm("Include special(!#$%&@'()*) characters"); 
+  
   if (passLength < 8 || passLength > 128) {
     window.alert("Password length does not match the parameter. Try again.");
     return;
@@ -32,10 +30,9 @@ function writePassword() {
 }
 
 
-// FUNCTIONS: 
+// helper functions: 
 function generatePassword(len, upper, lower, numeric, special) {
-  // second argument , chars is manual right now.
-  var chars = passwordCriteriaBuilder(upper, lower, numeric, special); // not included +,-./:;<=>?[\]^_{|}~
+  var chars = passwordCriteriaBuilder(upper, lower, numeric, special); 
   var password = [];
 
   for (let i = 0; i < len; i++) {
@@ -47,21 +44,16 @@ function generatePassword(len, upper, lower, numeric, special) {
   return password;
 }
 
-/* build password based on how many characters types to include, ex, Uppercase, lowercse, numbes, special chars.*/
+/* fx builds password based on how many character types to include, ex, Uppercase, lowercse, numbers, orspecial chars.*/
 function passwordCriteriaBuilder(upper, lower, numbers, special) { 
-  var combinesString = '';
+  var combinedString = '';
 
-  if(upper) combinesString += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  if(lower) combinesString += 'abcdefghijklmnopqrstuvwxyz';
-  if(numbers) combinesString += '0123456789';
-  if(special) combinesString += ` !#$%&@'()*`;
+  if(upper) combinedString += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  if(lower) combinedString += 'abcdefghijklmnopqrstuvwxyz';
+  if(numbers) combinedString += '0123456789';
+  if(special) combinedString += ` !#$%&@'()*`; // special chars not included: +,-./:;<=>?[\]^_{|}~
   
-    // returna a combined password of all the user type selections
-  return combinesString;
+  return combinedString;// returns a combined password of all the user type selections
 }
 
-// Testing: 
-console.log("Password with just Uppercase: " + passwordCriteriaBuilder(true) )
-console.log("Uppercase + Lowercase: "+ passwordCriteriaBuilder(true, true))
-console.log("Uppercase + Lowercase + numbers: " + passwordCriteriaBuilder(true, true, true))
-console.log("Uppercase + Lowercase + numbers + special characters: " + passwordCriteriaBuilder(true, true, true, true))
+
